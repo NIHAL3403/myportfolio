@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-gray-100 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <div class="logo text-2xl font-bold">
+              <i class="fas fa-briefcase mr-2"></i> MyPortfolio
+            </div>
+            <ul class="flex space-x-4">
+              <li><a href="#home" class="transition duration-300 ease-in-out">Home</a></li>
+              <li><a href="#about" class="transition duration-300 ease-in-out">About</a></li>
+              <li><a href="#skills" class="transition duration-300 ease-in-out">Skills</a></li>
+              <li><a href="#certifications" class="transition duration-300 ease-in-out">Certifications</a></li>
+              <li><a href="#projects" class="transition duration-300 ease-in-out">Projects</a></li>
+              <li><a href="#contact" class="transition duration-300 ease-in-out">Contact</a></li>
+            </ul>
+            <label class="switch">
+              <input type="checkbox" id="theme-switcher">
+              <span class="slider round"></span>
+              <span class="toggle-text mb-5">Dark</span>
+            </label><br>
+          </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center bg-cover bg-center dark:bg-gray-800 mb-10 shadow-2xl rounded-full" style="background-image: url('img/bg1.webp');">
+            <div class="text-center bg-white dark:bg-gray-800 bg-opacity-75 dark:bg-opacity-75 p-8 rounded-lg shadow-lg">
+              <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-white">Welcome to My Portfolio</h1>
+              <p class="mb-4 text-lg text-gray-600 dark:text-gray-300">Hi there, I'm POORNA CHANDRA TEJASHWI <br>
+                Full Stack developer with a passion for developing both the frontend and backend of applications.
+              </p>
+              <img src="img/portfolio.JPG" alt="Profile Image" class="w-32 h-32 rounded-full mx-auto transition-transform transform hover:scale-110 shadow-lg animate__animated animate__fadeIn animate__delay-1s hover:animate__pulse">
+              <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/poorna-chandra-tejashwi-b-h-b538851ab/" target="_blank" class="text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-500 fa-2x"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/NIHAL3403" target="_blank" class="text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 fa-2x"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/p.c.t.n?igsh=eDZvOGg0N2NoeXM4&utm_source=qr" target="_blank" class="text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 fa-2x"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/poornachandratejashwi?mibextid=LQQJ4d" target="_blank" class="text-gray-800 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 fa-2x"><i class="fab fa-facebook"></i></a>
+              </div>
+              <a href="resources/PCTN FullStack.pdf" download class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">Download Resume</a>
+            </div>
+          </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-200 dark:bg-gray-800 mb-4 shadow-xl">
+            <div class="container mx-auto flex  items-center justify-center">
+              <img src="img/about.jpeg" alt="About Image" class="w-32 h-32 object-cover rounded-lg shadow-lg mr-8">
+              
+              <div class="text-left">
+                <h2 class="text-4xl font-bold mb-6">About Me</h2>
+                <p class="mb-4 text-lg">Pursuing B.Tech in Computer Science & Systems Engineering. Passionate about leveraging cutting-edge technologies to design and develop robust software solutions. I thrive in dynamic environments where innovation and problem-solving are paramount. I excel in cross-functional teams, fostering open communication and a collaborative spirit to drive successful project outcomes. I am always open to networking, collaborating on exciting projects, and exploring new opportunities.</p>
+                
+                <!-- Container element -->
+                <div class="read-more-container">
+                  <input type="checkbox" id="read-more-checkbox" class="hidden">
+                  <label for="read-more-checkbox" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"></label>
+                  
+                  <!-- Hidden content -->
+                  <div id="more-content" class="hidden">
+                    <p class="mb-4 text-lg">In my free time, I enjoy learning new programming languages, exploring new technologies, and contributing to open-source projects. I'm also passionate about photography and traveling.</p>
+                    <p class="mb-4 text-lg">I'm always looking for opportunities to grow and learn, and I'm excited to connect with like-minded individuals who share my passion for technology and innovation.</p>
+                    <p class="mb-4 text-lg">Feel free to reach out to me on LinkedIn or GitHub to discuss potential projects or collaborations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <style>
+            #read-more-checkbox:checked ~ #more-content {
+              display: block;
+              margin-top: 20px;
+            }
+            #more-content {
+              display: none;
+            }
+            #read-more-checkbox:not(:checked) + label:before {
+              content: "Read More";
+            }
+            #read-more-checkbox:checked + label:before {
+              content: "Read Less";
+            }
+          </style>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-white dark:bg-gray-900 mb-4 shadow-xl">
+            <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold mb-6">Skills</h2>
+              <div class="flex flex-wrap justify-center gap-8">
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">HTML<br>
+                    95%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">CSS<br>
+                    80%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">Tailwind CSS <br>
+                    85%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">JavaScript<br>
+                    70%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">Java<br>
+                    85%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">DSA<br>
+                    75%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                  <h3 class="text-2xl font-bold mb-2">ReactJS<br>
+                    60%
+                  </h3>
+                  <div class="progress-bar w-full h-4 mb-4">
+                    <div class="progress-bar-inner bg-blue-600 h-4" style="width: 60%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 bg-gray-200 dark:bg-gray-800 mb-4 shadow-xl">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Certifications</h2>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="certification-card bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h3 class="text-2xl font-bold mb-2">Data Structure & Algorithm</h3>
+                        <p class="mb-4 text-lg">Understanding and implementation of fundamental Data Structures.<br>
+                            <b>Course Content:</b> Covered fundamental data structures (arrays, linked lists, stacks, queues, trees, graphs, etc.) and essential algorithms (sorting, searching, dynamic programming, etc.).<br>
+                            <b>Practical Application: </b> Included extensive practice on LeetCode to enhance problem-solving skills, preparing for coding interviews, and improving algorithmic thinking.
+                        </p>
+                        <a href="resources/DSA.pdf" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Certificate</a>
+                    </div>
+                    <div class="certification-card bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h3 class="text-2xl font-bold mb-2">HTML & CSS</h3>
+                        <p class="mb-4 text-lg">Proficiency in programming languages such as HTML and CSS. <br>
+                        <b> Course Content:</b>Focused on the basics of HTML and CSS, teaching how to create and style web pages. Topics included HTML tags, CSS properties, layout techniques, and responsive design.<br>
+                        <b>Skills Acquired:</b>Gained the ability to build static websites, understand the principles of web design, and create visually appealing and user-friendly interfaces.
+                        </p>
+                        <a href="resources/HTML.pdf" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Certificate</a>
+                    </div>
+                    <div class="certification-card bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                        <h3 class="text-2xl font-bold mb-2">Java</h3>
+                        <p class="mb-4 text-lg">Solid understanding of Java programming. <br>
+                        <b>Course Content:</b>Provided in-depth knowledge of Java programming, covering syntax, object-oriented programming concepts (inheritance, polymorphism, encapsulation), exception handling, and file I/O.
+                        Practical<br>
+                        <b>Application: </b>Developed hands-on projects to apply Java concepts, enhancing coding proficiency and preparing for software development roles.
+                        </p>
+                        <a href="resources/JAVA.pdf" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white dark:bg-gray-900 mb-4 shadow-xl">
+            <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold mb-6">Projects</h2>
+              <div class="flex flex-wrap justify-center gap-8">
+                <div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <h3 class="text-2xl font-bold mb-2">Image resizer application</h3>
+                  <p class="mb-4 text-lg">Electron application that allows you to select an image and easily change the width and/or height</p>
+                  <a href="https://github.com/NIHAL3403/image-resizer-electron" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <h3 class="text-2xl font-bold mb-2">News Application</h3>
+                  <p class="mb-4 text-lg">A modern, responsive news application that fetches and displays the latest news headlines using the News API</p>
+                  <a href="https://github.com/NIHAL3403/news-app-assignment" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <h3 class="text-2xl font-bold mb-2">ChatBot</h3>
+                  <p class="mb-4 text-lg">Implementing a ChatBot using natural language processing and Stanford Alpaca</p>
+                  <a href="https://github.com/NIHAL3403/ChatBot-using-Alpaca" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <h3 class="text-2xl font-bold mb-2">Todo App</h3>
+                  <p class="mb-4 text-lg">Implementing Todo Application using ReactJS</p>
+                  <a href="https://github.com/NIHAL3403/MERN-Todo-App" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <h3 class="text-2xl font-bold mb-2">Parallax Website</h3>
+                  <p class="mb-4 text-lg">This is a simple parallax website with fixed background images and overlay content sections</p>
+                  <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Project</a>
+                </div>
+                <div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <h3 class="text-2xl font-bold mb-2">Laser Security System</h3>
+                  <p class="mb-4 text-lg">To implement the security to the user to know the intruder presence on getting the beam reflected from the intruder</p>
+                  <a href="https://github.com/NIHAL3403/Laser-security-system" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">View Project</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-200 dark:bg-gray-800">
+            <div class="container mx-auto text-center">
+              <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+              <form action="#" method="post" class="max-w-lg mx-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                  <input type="text" name="name" placeholder="Name" class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded dark:bg-gray-800">
+                </div>
+                <div class="mb-4">
+                  <input type="email" name="email" placeholder="Email" class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded dark:bg-gray-800">
+                </div>
+                <div class="mb-4">
+                  <textarea name="message" rows="4" placeholder="Message" class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded dark:bg-gray-800"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors">Submit</button>
+                <div id="response-message" class="opacity-0 text-green-600 font-bold mb-4">Response sent!</div>
+              </form>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-500 dark:bg-gray-800 shadow-md py-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-4">
+                <button class="symbol-button hover:bg-blue-500 hover:shadow-md" onclick="window.location.href='https://www.whatsapp.com/?phone=9535001899/';">
+    
+                    <span class="symbol">
+                    <i class="fab fa-whatsapp" style="font-size:xx-large"></i>
+                    </span>
+                </button>
+
+
+                <button class="symbol-button hover:bg-blue-500 hover:shadow-md" onclick="window.location.href='https://mail.google.com/mail/u/0/?to=nihalhanumanthaiah@gmail.com#inbox?compose=DmwnWsCbJgRzpwXRQKTDqCfSDdKJvrVZbPqCjLNhFtLXxdfBSGvQtdcVLbNftsBVWZwghsHHwvPV/';">
+                    <span class="symbol"> 
+                    <i class="fab fa-google" style="font-size:xx-large;"></i>
+                    </span>
+                </button>
+              </div><br>
+          <p>© 2024 MyPortfolio. All rights reserved.</p>
+         
+        </div>
+      </footer>
+
+    <!-- JavaScript for Theme Switcher -->
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        themeSwitcher.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
